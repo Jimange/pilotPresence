@@ -45,7 +45,9 @@ angular
             templateUrl: 'views/booking-calendar.html',
             controller: 'CalendarCtrl',
             resolve: {
-              ratioClass: 'col-md-12'
+              ratioClass: function(){
+                return 'col-md-12';
+              }
             }
           }
         }
@@ -57,14 +59,18 @@ angular
             templateUrl: 'views/booking-calendar.html',
             controller: 'CalendarCtrl',
             resolve: {
-              ratioClass: 'col-md-5'
+              ratioClass:  function(){
+                return 'col-md-5';
+              }
             }
           },
           booking: {
             templateUrl: 'views/booking-day.html',
             controller: 'DayCtrl',
             resolve: {
-              ratioClass: 'col-md-7'
+              ratioClass: function(){
+                return 'col-md-7';
+              }
             }
           }
         }

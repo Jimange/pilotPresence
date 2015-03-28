@@ -8,7 +8,9 @@
  * Controller of the pilotPresenceApp
  */
 angular.module('pilotPresenceApp')
-  .controller('CalendarCtrl', function ($scope) {
+  .controller('CalendarCtrl', function ($scope, ratioClass) {
+    $scope.$emit('calendarClass', ratioClass);
+
     $scope.calendarView = 'month';
     $scope.calendarDay = new Date();
     $scope.events = [
