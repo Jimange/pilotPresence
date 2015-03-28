@@ -8,18 +8,24 @@
  * Controller of the pilotPresenceApp
  */
 angular.module('pilotPresenceApp')
-  .controller('DashboardCtrl', function ($scope) {
+  .controller('DashboardCtrl', function ($scope, uiGmapGoogleMapApi) {
     $scope.user = {
       name: 'Lauriane Kayungu',
       picture: '//s.gravatar.com/avatar/9abae84805c1e605f9ba30febbe32891?s=80'
     };
 
+    $scope.map = {};
+
+    uiGmapGoogleMapApi.then(function(/*maps*/) {
+      $scope.map = { center: { latitude: 51.494455, longitude: -0.087866 }, zoom: 7 };
+    });
+
     var today = new Date();
     console.log(today);
     $scope.bookings = [
-      {date:today, time: today, pilotBot: 'Lestrade', location:'Birmingham'},
-      {date:new Date(2015, 3, 3), time: new Date(2015, 3, 3), pilotBot: 'Lestrade', location:'London'},
-      {date:new Date(2015, 3, 24), time: new Date(2015, 3, 24), pilotBot: 'Lestrade', location: 'Paris'},
+      {startDate:new Date(2015, 2, 29, 8), endDate: new Date(2015, 2, 29, 10, 30), pilotBot: 'Lestrade', location:'Birmingham'},
+      {startDate:new Date(2015, 3, 3, 15), endDate: new Date(2015, 3, 3, 15, 30), pilotBot: 'Lestrade', location:'London'},
+      {startDate:new Date(2015, 3, 24, 13), endDate: new Date(2015, 3, 24, 16), pilotBot: 'Lestrade', location: 'Brussels'},
     ];
 
   });

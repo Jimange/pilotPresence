@@ -8,7 +8,9 @@
       <img ng-src="{{user.picture}}"/>
     </div>
     <div class="col-md-9 location-map">
-
+      <div id="map_canvas">
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" ></ui-gmap-google-map>
+      </div>
     </div>
   </div>
 
@@ -18,7 +20,7 @@
     <div class="col-xs-12 container-fluid bookings">
 
       <div class="row booking" ng-repeat="booking in bookings">
-        <div class="col-sm-2 booking--date">{{booking.date | date : 'EEE'}} / {{booking.time}}</div>
+        <div class="col-sm-2 booking--date">{{booking.startDate | date: 'EEE / HH.mm'}}-{{booking.endDate | date: 'HH.mm'}}</div>
         <div class="col-sm-3 booking--place">{{booking.location}}</div>
         <div class="col-sm-2 booking--inspect">Inspect {{booking.pilotName}}</div>
         <div class="col-sm-2 booking--calendar">View in calendar</div>

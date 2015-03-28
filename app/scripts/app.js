@@ -14,9 +14,10 @@ angular
     'ngCookies',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'uiGmapgoogle-maps'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
     // For any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise('/');
     //
@@ -38,5 +39,12 @@ angular
 //        controller: ''
 //      })
     ;
+
+    //Google map API
+    uiGmapGoogleMapApiProvider.configure({
+      key: 'AIzaSyBWdclaCvBCuCUBnBzFetjc6ficgFa492w',
+      v: '3.17',
+      libraries: 'weather,geometry,visualization'
+    });
   })
 ;
