@@ -15,7 +15,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'mwl.calendar'
   ])
   .config(function ($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
     // For any unmatched url, redirect to /state1
@@ -33,11 +34,41 @@ angular
 //        templateUrl: '',
 //        controller: ''
 //      })
-//      .state('booking', {
-//        url: '/booking',
-//        templateUrl: '',
-//        controller: ''
-//      })
+      .state('booking', {
+        templateUrl: 'views/booking.html',
+        controller: 'BookingCtrl'
+      })
+      .state('booking.calendar', {
+        url: '/booking',
+        views: {
+          calendar: {
+            templateUrl: 'views/booking-calendar.html',
+            controller: 'CalendarCtrl',
+            resolve: {
+              ratioClass: 'col-md-12'
+            }
+          }
+        }
+      })
+      .state('booking.day', {
+        url: '/booking/:year/:month/:day',
+        views: {
+          calendar: {
+            templateUrl: 'views/booking-calendar.html',
+            controller: 'CalendarCtrl',
+            resolve: {
+              ratioClass: 'col-md-5'
+            }
+          },
+          booking: {
+            templateUrl: 'views/booking-day.html',
+            controller: 'DayCtrl',
+            resolve: {
+              ratioClass: 'col-md-7'
+            }
+          }
+        }
+      })
     ;
 
     //Google map API

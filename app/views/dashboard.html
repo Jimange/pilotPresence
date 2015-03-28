@@ -22,7 +22,7 @@
       <div class="row booking" ng-repeat="booking in bookings">
         <div class="col-sm-2 booking--date">{{booking.startDate | date: 'EEE / HH.mm'}}-{{booking.endDate | date: 'HH.mm'}}</div>
         <div class="col-sm-3 booking--place">{{booking.location}}</div>
-        <div class="col-sm-2 booking--inspect">Inspect {{booking.pilotName}}</div>
+        <div class="col-sm-2 booking--inspect">Inspect {{booking.beamName}}</div>
         <div class="col-sm-2 booking--calendar">View in calendar</div>
         <div class="col-sm-1 booking--cancel">Cancel</div>
         <div class="col-sm-2 booking--settings">settings/notification</div>

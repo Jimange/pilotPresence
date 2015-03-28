@@ -1,0 +1,17 @@
+<div class="booking-calendar">
+  <mwl-calendar
+      calendar-events="events"
+      calendar-view="calendarView"
+      calendar-current-day="calendarDay"
+      calendar-control="calendarControl"
+      calendar-event-click="eventClicked($event)"
+      calendar-edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
+      calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
+      calendar-edit-event-click="eventEdited($event)"
+      calendar-delete-event-click="eventDeleted($event)"
+      calendar-auto-open="true">
+      </mwl-calendar>
+</div>
+
+    <div ng-click="calendarControl.prev()"></div>
+    <div ng-click="calendarControl.next()"></div>

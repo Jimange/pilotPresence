@@ -23,9 +23,9 @@ angular.module('pilotPresenceApp')
     var today = new Date();
     console.log(today);
     $scope.bookings = [
-      {startDate:new Date(2015, 2, 29, 8), endDate: new Date(2015, 2, 29, 10, 30), pilotBot: 'Lestrade', location:'Birmingham'},
-      {startDate:new Date(2015, 3, 3, 15), endDate: new Date(2015, 3, 3, 15, 30), pilotBot: 'Lestrade', location:'London'},
-      {startDate:new Date(2015, 3, 24, 13), endDate: new Date(2015, 3, 24, 16), pilotBot: 'Lestrade', location: 'Brussels'},
+      {startDate:new Date(2015, 2, 29, 8), endDate: new Date(2015, 2, 29, 10, 30), beamName: 'Lestrade', location:'Birmingham'},
+      {startDate:new Date(2015, 3, 3, 15), endDate: new Date(2015, 3, 3, 15, 30), beamName: 'Lestrade', location:'London'},
+      {startDate:new Date(2015, 3, 24, 13), endDate: new Date(2015, 3, 24, 16), beamName: 'Lestrade', location: 'Brussels'},
     ];
 
   });
