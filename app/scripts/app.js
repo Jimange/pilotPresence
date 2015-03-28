@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, redirect to /state1
@@ -23,18 +24,19 @@ angular
     $stateProvider
       .state('dashboard', {
         url: '/',
-        templateUrl: '',
-        controller: ''
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
       })
-      .state('auth', {
-        url: '/login',
-        templateUrl: '',
-        controller: ''
-      })
-      .state('booking', {
-        url: '/booking',
-        templateUrl: '',
-        controller: ''
-      });
+//      .state('auth', {
+//        url: '/login',
+//        templateUrl: '',
+//        controller: ''
+//      })
+//      .state('booking', {
+//        url: '/booking',
+//        templateUrl: '',
+//        controller: ''
+//      })
+    ;
   })
 ;

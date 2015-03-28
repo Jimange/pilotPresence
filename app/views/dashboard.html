@@ -1,0 +1,33 @@
+<div class="dashboard container">
+  <h1>
+    Welcome {{user.name}}
+  </h1>
+
+  <div class="welcome row">
+    <div class="col-md-3">
+      <img ng-src="{{user.picture}}"/>
+    </div>
+    <div class="col-md-9 location-map">
+
+    </div>
+  </div>
+
+  <h3>Current Bookings</h3>
+
+  <div class="row">
+    <div class="col-xs-12 container-fluid bookings">
+
+      <div class="row booking" ng-repeat="booking in bookings">
+        <div class="col-sm-2 booking--date">{{booking.date | date : 'EEE'}} / {{booking.time}}</div>
+        <div class="col-sm-3 booking--place">{{booking.location}}</div>
+        <div class="col-sm-2 booking--inspect">Inspect {{booking.pilotName}}</div>
+        <div class="col-sm-2 booking--calendar">View in calendar</div>
+        <div class="col-sm-1 booking--cancel">Cancel</div>
+        <div class="col-sm-2 booking--settings">settings/notification</div>
+      </div>
+
+    </div>
+  </div>
+
+  <a class="new-booking">+ new booking</a>
+</div>
