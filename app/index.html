@@ -19,7 +19,7 @@
 
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
     <!-- webfonts -->
@@ -57,7 +57,7 @@
           <ul class="nav navbar-nav">
             <li ui-sref="dashboard" ui-sref-active="active"><a ui-sref="dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
             <li ui-sref="booking.calendar" ui-sref-active="active"><a ui-sref="booking.calendar">Booking</a></li>
-            <li class="dropdown"><a >Edit Profile</a></li>
+            <li class="dropdown"><a ></a></li>
           </ul>
         </div>
       </nav>
@@ -101,6 +101,9 @@
         <script src="scripts/controllers/booking.js"></script>
         <script src="scripts/controllers/calendar.js"></script>
         <script src="scripts/controllers/day.js"></script>
+        <script src="scripts/services/storelocal.js"></script>
+        <script src="scripts/services/backend.js"></script>
+        <script src="scripts/controllers/auth.js"></script>
         <!-- endbuild -->
 </body>
 </html>

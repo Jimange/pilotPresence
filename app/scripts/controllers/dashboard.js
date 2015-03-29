@@ -8,7 +8,7 @@
  * Controller of the pilotPresenceApp
  */
 angular.module('pilotPresenceApp')
-  .controller('DashboardCtrl', function ($scope, uiGmapGoogleMapApi) {
+  .controller('DashboardCtrl', function ($scope, uiGmapGoogleMapApi, Backend) {
     $scope.user = {
       name: 'Lauriane Kayungu',
       picture: '//s.gravatar.com/avatar/9abae84805c1e605f9ba30febbe32891?s=80'
@@ -28,4 +28,5 @@ angular.module('pilotPresenceApp')
       {startDate:new Date(2015, 3, 24, 13), endDate: new Date(2015, 3, 24, 16), beamName: 'Lestrade', location: 'Brussels'},
     ];
 
+    Backend.someMethod();
   });
