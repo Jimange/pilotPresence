@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+// mixins
+@import 'shadows_r-corners';
+// endmixins
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -12,19 +16,199 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
 }
 
+
+// base
+$base-font-size: 			14px;
+
+$light-grey:	 			#f2f2f2;
+$mid-grey:					#e6e6e6;
+$dark-grey:					#ccc;
+
+$red:						#dd4941;
+
+$body-color:				#4d4d4d;
+
+$btn-blk:					#333;
+$btn-blk-hover:				#666;
+$btn-blk-active:			#1a1a1a;
+$btn-blk-active-text:		#b3b3b3;
+
+$btn-red:					#dd4941;
+$btn-red-hover:				#e46d67;
+$btn-red-active:			#a63731;
+$btn-red-active-text:		#eb928d;
+
+$placeholder-text-color: 	#999;
+
+$heading-font:				"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font:					"PT Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+
+
 h1, h2, h3, h4, h5 {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $heading-font;
+  font-weight: 600;
+}
+
+h1 {
+	font-size: 53px;
+}
+
+h2 {
+	font-size: 33px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+p {
+	font-size: $base-font-size;
+	color: $body-color;
+	
+	&.large-text {
+		font-size: 20px;
+	}
+	
+	&.sml-text {
+		font-size: 12px;
+	}
+	
+	&.error {
+		color: $red;
+	}
+}
+
+label {
+	font-family: $body-font;
+	color: $body-color;
+	font-size: $base-font-size;
+}
+
+//input
+
+$input-height: 35px;
+
+input {
+	min-height: $input-height;
+	background-color: $mid-grey;
+	cursor: text;
+	font-size: $base-font-size;
+	font-family: $body-font;
+}
+
+::-webkit-input-placeholder {
+   color: $placeholder-text-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $placeholder-text-color;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $placeholder-text-color;  
+}
+
+:-ms-input-placeholder {  
+   color: $placeholder-text-color;  
+}
+
+//button
+
+button {
+	background-color: $btn-blk;
+	min-height: $input-height;
+	font-size: $base-font-size;
+	color: #fff;
+	font-family: $body-font;
+	@include border-radius(12px);
+	cursor: hand;
+	cursor: pointer;
+	
+	&:hover {
+		background-color: $btn-blk-hover;
+		text-decoration: none;
+	}
+	
+	&:focus {
+		text-decoration: none;
+		outline-color: rgba(26,26,26,0.75); 
+	}
+	
+	&:active {
+		text-decoration: none;
+		background-color: $btn-blk-active;
+		color: $btn-blk-active-text;
+	}
+	
+	&.btn--red {
+		background-color: $btn-red;
+		
+		&:hover {
+			text-decoration: none;
+			background-color: $btn-red-hover;
+		}
+		
+		&:focus {
+			text-decoration: none;
+			outline-color: rgba(166,55,49,0.75); 
+		}
+		
+		&:active {
+			text-decoration: none;
+			background-color: $btn-red-active;
+			color: $btn-red-active-text;
+		}
+	}
 }
 
 //header
+header {
+	width: 100%;
+	height: 68px;
+	background-color: $light-grey;
+}
+
 nav {
-  max-width: 1170px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  
+  a {
+	  height: 68px;
+	  font-family: $heading-font;
+	  font-weight: 400;
+	  font-size: $base-font-size;
+	  color: #333;
+	  padding: 0 20px;
+	  box-sizing: border-box;
+	  cursor: hand;
+	  cursor: pointer;
+	  
+	  &:hover {
+		  background-color: $mid-grey;
+		  text-decoration: none;
+		  color: #111;
+	  }
+	  
+	  &:focus {
+		  background-color: $mid-grey;
+		  text-decoration: none;
+	  }
+	  
+	  &:active {
+		  background-color: $dark-grey;
+		  text-decoration: none;
+		  color: #000;
+	  }
+  }
 }
+
 //Dashboard
 .dashboard {
   .welcome {
