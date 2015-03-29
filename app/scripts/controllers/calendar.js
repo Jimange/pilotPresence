@@ -12,7 +12,7 @@ angular.module('pilotPresenceApp')
     $scope.$emit('calendarClass', ratioClass);
 
     $scope.calendarView = 'month';
-    $scope.calendarDay = new Date();
+    $scope.calendarDay = new Date($stateParams.year + '-' + $stateParams.month + '-' + $stateParams.day);
 
     $scope.calendarClicked = function($event){
       console.log('calendar clicked', $event);
@@ -53,8 +53,12 @@ angular.module('pilotPresenceApp')
         $state.go('booking.day', params);
         return;
       }
-      $state.go('booking.day', params, {location: false});
+      $state.go('booking.day', params);
     }
 
 
+    $scope.clear = function(){
+      localStorage.removeItem('events');
+      $state.reload();
+    }
   });
