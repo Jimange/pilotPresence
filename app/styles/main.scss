@@ -19,6 +19,12 @@ h1, h2, h3, h4, h5 {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+//header
+nav {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
 //Dashboard
 .dashboard {
   .welcome {
