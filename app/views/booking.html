@@ -1,12 +1,40 @@
 <div class="booking container">
   <div class="row">
+  	
+  	<h1 class="col-sm-12">Book A Beam</h1>
+  	<p class="col-sm-9 large-text">Aesthetic meggings squid kitsch, pickled skateboard gentrify cold-pressed YOLO salvia Etsy stumptown. Lomo actually PBR&B Neutra. Raw denim letterpress tofu, polaroid kogi post-ironic hoodie.</p>
+  </div>
+  
+  <div class="row">	
+  	<h3 class="col-sm-12">Location</h3>
+  	<p class="col-sm-12">Austin kale chips fingerstache drinking vinegar. 3 wolf moon pour-over bicycle rights, biodiesel organic swag 90's.</p>
+  	<div class="dropdown col-sm-3">
+	  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+	    location
+	    <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+	    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">London, Innovation Warehouse</a></li>
+	    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another location</a></li>
+	    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another location</a></li>
+	    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another location</a></li>
+	  </ul>
+	</div>
+  </div>
 
+  <div class="row">	
+	<h3 class="col-sm-12">Beam Availability</h3>
+	<span class="input-date glyphicon glyphicon-calendar"></span>
+  	<input placeholder="00/00/00  00:00" class="col-sm-3" type="text" />
+  	<button class="col-sm-2">check availability</button>
+  </div>
+  	
+  <div class="row">	
     <ul class="beam">
       <li ng-repeat="beam in beams">a device</li>
     </ul>
 
     <div ui-view="calendar" ng-class="[calendar]"></div>
     <div ui-view="booking" ng-class="[day]"></div>
-
   </div>
 </div>
