@@ -48,7 +48,6 @@ angular.module('pilotPresenceApp')
       console.log(xhr.responseText);
     };
 
-    xhr.send();
 
     // Public API here
     return {

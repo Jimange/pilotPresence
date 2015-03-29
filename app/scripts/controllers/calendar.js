@@ -12,7 +12,12 @@ angular.module('pilotPresenceApp')
     $scope.$emit('calendarClass', ratioClass);
 
     $scope.calendarView = 'month';
-    $scope.calendarDay = new Date($stateParams.year + '-' + $stateParams.month + '-' + $stateParams.day);
+    var currdate = new Date();
+
+    console.log('fooo');
+    console.log($stateParams);
+    $scope.calendarDay = $stateParams.year ? new Date($stateParams.year, parseInt($stateParams.month) - 1, $stateParams.day) : new Date();
+    console.log($scope.calendarDay);
 
     $scope.calendarClicked = function($event){
       console.log('calendar clicked', $event);

@@ -14,6 +14,7 @@ angular.module('pilotPresenceApp')
 
     $scope.calendarView = 'day';
     $scope.calendarDay = new Date($stateParams.year + '-' + $stateParams.month + '-' + $stateParams.day);
+    console.log($scope.calendarDay);
 
     $scope.startTime = null;
     $scope.endTime = null;
