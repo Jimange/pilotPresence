@@ -84,6 +84,12 @@ p {
 	}
 }
 
+label {
+	font-family: $body-font;
+	color: $body-color;
+	font-size: $base-font-size;
+}
+
 //input
 
 $input-height: 35px;
