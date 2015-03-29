@@ -2,12 +2,12 @@
   <div class="row">
   	
   	<h1 class="col-sm-12">Book A Beam</h1>
-  	<p class="col-sm-9 large-text">Aesthetic meggings squid kitsch, pickled skateboard gentrify cold-pressed YOLO salvia Etsy stumptown. Lomo actually PBR&B Neutra. Raw denim letterpress tofu, polaroid kogi post-ironic hoodie.</p>
+  	<!--<p class="col-sm-9 large-text">Aesthetic meggings squid kitsch, pickled skateboard gentrify cold-pressed YOLO salvia Etsy stumptown. Lomo actually PBR&B Neutra. Raw denim letterpress tofu, polaroid kogi post-ironic hoodie.</p>-->
   </div>
   
   <div class="row">	
   	<h3 class="col-sm-12">Location</h3>
-  	<p class="col-sm-12">Austin kale chips fingerstache drinking vinegar. 3 wolf moon pour-over bicycle rights, biodiesel organic swag 90's.</p>
+  	<!--<p class="col-sm-12">Austin kale chips fingerstache drinking vinegar. 3 wolf moon pour-over bicycle rights, biodiesel organic swag 90's.</p>-->
   	<div class="dropdown col-sm-3">
 	  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 	    location
@@ -33,9 +33,27 @@
     <ul class="beam">
       <li ng-repeat="beam in beams">a device</li>
     </ul>
+  </div>
 
     <div ui-view="calendar" class="col-xs-12"></div>
     <div ui-view="booking" class="col-xs-12"></div>
-
-  </div>
+  
+  <div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div ui-view="booking" ng-class="[day]"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  
 </div>

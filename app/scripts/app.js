@@ -75,6 +75,10 @@ angular
           }
         }
       })
+      /*.state('edit', {
+	      templateUrl: 'views/edit.html'
+      	}
+      })*/
     ;
 
     //Google map API
