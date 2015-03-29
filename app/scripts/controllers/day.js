@@ -44,8 +44,8 @@ angular.module('pilotPresenceApp')
 
       var booking = {
         title: '', // The title of the event
-        starts_at: momentTime.toDate(), // jshint ignore:line
-        ends_at: angular.copy(momentTime).add(1, 'hour').toDate() // jshint ignore:line
+        starts_at: angular.copy(momentTime).add(-1, 'hour').toDate(), // jshint ignore:line
+        ends_at: momentTime.toDate() // jshint ignore:line
       };
 
       $rootScope.events.push(booking);

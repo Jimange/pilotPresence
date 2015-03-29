@@ -56,5 +56,8 @@ angular.module('pilotPresenceApp')
       $state.go('booking.day', params, {location: false});
     }
 
-
+    $scope.clear = function(){
+      localStorage.removeItem('events');
+      $state.reload();
+    }
   });
