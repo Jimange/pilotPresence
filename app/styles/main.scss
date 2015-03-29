@@ -39,3 +39,20 @@ h1, h2, h3, h4, h5 {
 
   .angular-google-map-container { height: 200px; }
 }
+
+.booking {
+
+}
+
+.booking-calendar {
+  .cal-day-current {
+    background: aqua;
+  }
+}
+.booking-day{
+  .booking-day--inner {
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}

@@ -1,14 +1,18 @@
 <div class="booking-day">
-  <mwl-calendar
-      calendar-events="events"
-      calendar-view="calendarView"
-      calendar-current-day="calendarDay"
-      calendar-control="calendarControl"
-      calendar-event-click="eventClicked($event)"
-      calendar-edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
-      calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
-      calendar-edit-event-click="eventEdited($event)"
-      calendar-delete-event-click="eventDeleted($event)"
-      calendar-auto-open="true">
-  </mwl-calendar>
+  <div class="booking-day--inner">
+    <mwl-calendar
+        id="dayCalendar"
+        calendar-events="events"
+        calendar-view="calendarView"
+        calendar-current-day="calendarDay"
+        calendar-control="calendarControl"
+        calendar-event-click="eventClicked($event)"
+        calendar-day-view-split="30"
+        calendar-edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
+        calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
+        calendar-edit-event-click="eventEdited($event)"
+        calendar-delete-event-click="eventDeleted($event)"
+        calendar-auto-open="true">
+    </mwl-calendar>
+  </div>
 </div>

@@ -1,10 +1,11 @@
 <div class="booking-calendar">
   <mwl-calendar
+      id="monthCalendar"
       calendar-events="events"
       calendar-view="calendarView"
       calendar-current-day="calendarDay"
       calendar-control="calendarControl"
-      calendar-event-click="eventClicked($event)"
+      calendar-event-click="calendarClicked($event)"
       calendar-edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
       calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
       calendar-edit-event-click="eventEdited($event)"
